@@ -1,0 +1,52 @@
+﻿@model CreateStaffDto
+@{
+    ViewData["Title"] = "AddStaff";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" for="val-username">
+            Personel Adı <span class="text-danger">*</span>
+        </label>
+        <div class="col-lg-6">
+            <input type="text" class="form-control input-rounded" asp-for="Name" placeholder="Personel adını giriniz..">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" >
+            Personel Ünvanı <span class="text-danger">*</span>
+        </label>
+        <div class="col-lg-6">
+            <input type="text" class="form-control input-rounded" asp-for="Title" placeholder="Personel ünvanı giriniz..">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" >
+            Sosyal Medya 1 <span class="text-danger">*</span>
+        </label>
+        <div class="col-lg-6">
+            <input type="text" class="form-control input-rounded" asp-for="SocialMedia1" placeholder="Sosyal medya..">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label">
+            Sosyal Medya 2 <span class="text-danger">*</span>
+        </label>
+        <div class="col-lg-6">
+            <input type="text" class="form-control input-rounded" asp-for="SocialMedia2" placeholder="Sosyal medya..">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" >
+            Sosyal Medya 3 <span class="text-danger">*</span>
+        </label>
+        <div class="col-lg-6">
+            <input type="text" class="form-control input-rounded" asp-for="SocialMedia3" placeholder="Sosyal medya..">
+        </div>
+    </div>
+    <div class="d-flex justify-content-end">
+            <button class="btn mb-1 btn-rounded btn-success">Personel Ekle</button>
+    </div>
+
+</form>

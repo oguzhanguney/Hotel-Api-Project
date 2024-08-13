@@ -1,8 +1,28 @@
-﻿
+﻿@model List<ResultStaffDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
-
+<table class="table table-bordered table-striped verticle-middle">
+    <tr>
+        <th>#</th>
+        <th>Personel Adı</th>
+        <th>Personel Ünvan</th>
+        <th>Detaylar</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.StaffID</th>
+            <td>@item.Name</td>
+            <td>@item.Title</td>
+            <td><a href="#" class="btn mb-1 btn-warning">Detaylar<span class="btn-icon-right"><i class="fa fa-star"></i></span></a></td>
+            <td><a href="/Staff/UpdateStaff/@item.StaffID" class="btn mb-1 btn-success">Güncelle <span class="btn-icon-right"><i class="fa fa-check"></i></span></a></td>
+            <td><a href="/Staff/DeleteStaff/@item.StaffID" class="btn mb-1 btn-danger">Sil <span class="btn-icon-right"><i class="fa fa-close"></i></a></td>
+        </tr>
+    }
+</table>
+<a href="/Staff/AddStaff/" class="btn btn-info">Yeni Personel Girişi</a>
